@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-// 1- Sayının pozitif negatif veya sıfır olduğunu belirleme
+// 1- Sayının pozitif, negatif veya sıfır olduğunu belirleme
 Console.WriteLine("Lütfen sayıyı girin:");
 int num = int.Parse(Console.ReadLine()); 
 
@@ -55,13 +55,12 @@ switch (n)
         break;
 }
 
-    Console.WriteLine(day + " günüdür");
+    Console.WriteLine(day + " günüdür.");
 
 
 
 
 // 3- Hesap makinesi
-
 Console.WriteLine("Birinci sayıyı yazın:");
 double num1 = Convert.ToDouble(Console.ReadLine());
 
@@ -97,7 +96,6 @@ Console.WriteLine("Sonuç:" + result);
 
 
 // 4- üç sayıdan en büyüğünü bulma
-
 Console.WriteLine("lütfen 1. sayıyı girin");
 double num1 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("lütfen 2. sayıyı girin");
@@ -124,7 +122,6 @@ Console.WriteLine("En büyük olan sayı:" + maxnum);
 
 
 // 5- şifre güçlülüğü kontrol etme
-
 Console.WriteLine("Şifreyi giriniz:");
 string password = Console.ReadLine();
 
@@ -163,21 +160,20 @@ bool PasswordControl(string password)
 }
 
 // Regex sınıfı ile çözümü:
-
 Console.Write("Lütfen bir şifre girin: ");
-string sifre = Console.ReadLine();
+string password = Console.ReadLine();
 
 bool length = sifre.Length >= 8;
-bool hasUpperCase = Regex.IsMatch(sifre, "[A-Z]");
-bool hasSpecialchar = Regex.IsMatch(sifre, "[@#$%]");
+bool hasUpperCase = Regex.IsMatch(password, "[A-Z]");
+bool hasSpecialchar = Regex.IsMatch(password, "[@#$%]");
 
 if (length && hasUpperCase && hasSpecialchar)
 {
-    Console.WriteLine("Şifre güçlü!");
+    Console.WriteLine("Şifre güçlü.");
 }
 else
 {
-    Console.WriteLine("Şifre zayıf! Eksikler:");
+    Console.WriteLine("Şifre zayıf. Eksikler:");
 
     if (!length)
         Console.WriteLine("- Şifre en az 8 karakter uzunluğunda olmalı.");
